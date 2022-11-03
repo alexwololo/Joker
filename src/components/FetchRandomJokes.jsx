@@ -16,7 +16,7 @@ function FetchRandomJokes() {
   return (
     <div>
       My API
-      <button onClick={apiGet}>Fetch API</button>
+      <button onClick={getAPI}>Fetch API</button>
       <div>
         <ul>
           {data.map((item) => (
