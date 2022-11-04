@@ -1,13 +1,17 @@
 
 import './App.css'
-import FetchRandomJokes from './components/fetchRandomJokes'
+
+import LoginPage from './components/LoginPage';
+
 
 function App() {
+
+
   return (
-    <div className="App">
-      <FetchRandomJokes />
-    </div>
+    <LoginPage />
   )
 }
 
 export default App
+
+
