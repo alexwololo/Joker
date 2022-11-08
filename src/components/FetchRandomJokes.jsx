@@ -16,9 +16,11 @@ function FetchRandomJokes() {
   };
 
   return (
+
     <div>
+
       <header>
-        
+
       <section className="headerSection left">
         <h4>Joker</h4>
         <h1>Local</h1>
@@ -62,6 +64,7 @@ function FetchRandomJokes() {
       </div>
       </section>
       </header>
+
     </div>
   );
 }

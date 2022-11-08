@@ -7,7 +7,8 @@ import { useAuthState, useSignInWithGoogle } from "react-firebase-hooks/auth";
 import FetchRandomJokes from "./FetchRandomJokes"
 import { auth } from "../firebaseApp";
 import { signOut } from "firebase/auth";
-import Cookies from "./Cookies"
+import GetCookie from "./GetCookie"
+
 
 const LoginPage = () => {
   const [user, loading, error] = useAuthState(auth);
@@ -57,9 +58,10 @@ const LoginPage = () => {
       >
         Sign In
       </button>
-      <Cookies />
+      <GetCookie />
     </div>
-  )
+  );
+
 }
 
 
