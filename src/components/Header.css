@@ -1,0 +1,132 @@
+header {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.headerSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 3rem;
+  color: var(--color-white);
+}
+
+.headerSection.left {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(85, 153, 100, 1),
+    rgba(85, 153, 100, 1)
+  );
+}
+.headerSection.right {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(112, 56, 89, 1),
+    rgba(112, 56, 89, 1)
+  );
+}
+
+.headerSection h4 {
+  font-size: 6rem;
+  font-weight: normal;
+  margin-bottom: 2.5rem;
+}
+.headerSection h1 {
+  font-size: 15rem;
+  margin-bottom: 4rem;
+}
+.headerSection p {
+  width: 50%;
+  font-size: 2rem;
+  margin-bottom: 8rem;
+}
+.headerSection a {
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 1.5rem 6rem;
+  font-size: 2.6rem;
+  border-radius: 1rem;
+}
+
+@media only screen and (max-width: 1300px) {
+  .headerSection h4 {
+    font-size: 5rem;
+  }
+  .headerSection h1 {
+    font-size: 14rem;
+  }
+  .headerSection p {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .headerSection h1 {
+    font-size: 12rem;
+  }
+  .headerSection p {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .headerSection h1 {
+    font-size: 10rem;
+  }
+  .headerSection p {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  header {
+    grid-template-columns: 1fr;
+  }
+  .headerSection {
+    padding: 1rem;
+  }
+  .headerSection.right {
+    background-position: top;
+  }
+  .headerSection h4 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+  .headerSection h1 {
+    font-size: 8rem;
+    margin-bottom: 2.5rem;
+  }
+  .headerSection p {
+    width: 60%;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .headerSection a {
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .headerSection p {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 430px) {
+  .headerSection h4 {
+    font-size: 2.5rem;
+  }
+  .headerSection h1 {
+    font-size: 5rem;
+  }
+  .headerSection p {
+    width: 90%;
+    font-size: 1.6rem;
+  }
+  .headerSection a {
+    padding: 1rem 3rem;
+    font-size: 1.6rem;
+  }
+}
