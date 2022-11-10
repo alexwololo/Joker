@@ -20,7 +20,7 @@ function FetchRandomJokes() {
     <div>
 
       <header>
-
+    <img className="image" src="https://res.cloudinary.com/dpzxtgjp0/image/upload/v1668073875/cld-sample.jpg" alt="" />
       <section className="headerSection left">
         <h4>Joker</h4>
         <h1>Local</h1>
