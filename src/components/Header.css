@@ -17,6 +17,7 @@ header {
 }
 
 .headerSection.left {
+  overflow: scroll;
   background-image: linear-gradient(
     to bottom,
     rgba(85, 153, 100, 1),
@@ -24,6 +25,7 @@ header {
   );
 }
 .headerSection.right {
+  overflow: scroll;
   background-image: linear-gradient(
     to bottom,
     rgba(112, 56, 89, 1),
