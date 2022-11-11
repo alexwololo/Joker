@@ -4,7 +4,7 @@ import CookieConsent, {  } from "react-cookie-consent";
 const GetCookie = () => {
 
   return(
-<CookieConsent debug={true}
+<CookieConsent
   location="bottom"
   buttonText="I accept"
   cookieName="JokerCookie"
