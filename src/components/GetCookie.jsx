@@ -1,4 +1,4 @@
-import CookieConsent, { Cookies, getCookieConsentValue } from "react-cookie-consent";
+import CookieConsent, {  } from "react-cookie-consent";
 
 
 const GetCookie = () => {
@@ -7,7 +7,7 @@ const GetCookie = () => {
 <CookieConsent debug={true}
   location="bottom"
   buttonText="I accept"
-  cookieName="myAwesomeCookieName2"
+  cookieName="JokerCookie"
   style={{ background: "#2B373B" }}
   buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
   expires={1}
@@ -19,9 +19,10 @@ const GetCookie = () => {
   }}
   enableDeclineButton
   onDecline={() => {
-    alert("nay!");}}
+    alert("nay!");
+  }}
   >
-        This website uses cookies to enhance the user experience.
+        This site stores a cookie if you accept, otherwise proceed to log in
       </CookieConsent>
   )
 }
