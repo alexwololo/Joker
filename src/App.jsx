@@ -5,9 +5,6 @@ import LogRocket from "logrocket";
 LogRocket.init("pnsbj7/joker");
 
 function App() {
-<<<<<<< HEAD
-    return <LoginPage />;
-=======
     return (
         <>
             {/* <Nav /> */}
@@ -16,7 +13,6 @@ function App() {
             </div>
         </>
     );
->>>>>>> alex
 }
 
 export default App;
