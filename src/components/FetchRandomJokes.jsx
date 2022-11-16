@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
+import mobileImage from "../assets/mobileImage.jpg";
+import Laugh from "../assets/Laugh.jpg";
 
 let jokeURLOne = "https://official-joke-api.appspot.com/jokes/random";
 let jokeURLTwo = "https://official-joke-api.appspot.com/jokes/programming/random";
@@ -52,15 +54,10 @@ function FetchRandomJokes() {
 
     return (
         <div>
-            <header
-                style={{
-                    backgroundImage: `url("https://res.cloudinary.com/dpzxtgjp0/image/upload/v1668073875/cld-sample.jpg")`,
-                }}
-            >
-                {/* <img className="image" src="https://res.cloudinary.com/dpzxtgjp0/image/upload/v1668073875/cld-sample.jpg" alt="" /> */}
+            <header className="backimage">
                 <section className="headerSection left">
-                    <h1>Random</h1>
                     <div>
+                        <h1>Random</h1>
                         <ul>
                             <li key={jokeOne.id}>
                                 <h3>{jokeOne.setup}</h3>
@@ -74,8 +71,8 @@ function FetchRandomJokes() {
                     <div></div>
                 </section>
                 <section className="headerSection right">
-                    <h1>Coder</h1>
                     <div>
+                        <h1>Coder</h1>
                         <ul>
                             <li key={jokeTwo?.[0]?.id}>
                                 <h3>{jokeTwo?.[0]?.setup}</h3>
