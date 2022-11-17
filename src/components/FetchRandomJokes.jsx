@@ -1,72 +1,87 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import "./Header.css";
 
+let jokeURLOne = "https://official-joke-api.appspot.com/jokes/random";
+let jokeURLTwo = "https://official-joke-api.appspot.com/jokes/programming/random";
+
 function FetchRandomJokes() {
-  const [data, setData] = useState([]);
+    const [jokeOne, setJokeOne] = useState({});
+    const [jokeTwo, setJokeTwo] = useState({});
 
-  //Get Method
-  const getAPI = () => {
-    fetch("https://official-joke-api.appspot.com/random_ten")
-      .then((response) => response.json())
-      .then((json) => {
-        console.log(json);
-        setData(json);
-      });
-  };
+    async function getJoke(jokeURL, setJoke) {
+        const rslt = await fetch(jokeURL);
+        const joke = await rslt.json();
+        setJoke(joke);
+    }
 
-  return (
+    useEffect(() => {
+        getJoke(jokeURLOne, setJokeOne);
+        getJoke(jokeURLTwo, setJokeTwo);
+    }, []);
 
-    <div>
+    // //Get Method
+    // const firstAPI = () => {
 
-      <header>
-    <img className="image" src="https://res.cloudinary.com/dpzxtgjp0/image/upload/v1668073875/cld-sample.jpg" alt="" />
-      <section className="headerSection left">
-        <h4>Joker</h4>
-        <h1>Local</h1>
-        <p>
-          Lorem ipsum dolor sit amet conse adipisicing elit. Sit iste ipsum
-          perspiciatis pariatur, minus
-        </p>
-        <button onClick={getAPI}>Fetch API</button>
-      <div>
-        <ul>
-          {data.map((item) => (
-            <li key={item.id}>
-              <h3>{item.setup}</h3>
-              <p>
-                {item.punchline}
-              </p>
-            </li>
-          ))}
-        </ul>
-      </div>
-      </section>
-      <section className="headerSection right">
-        <h4>Joker 2</h4>
-        <h1>General</h1>
-        <p>
-          Lorem ipsum dolor sit amet conse adipisicing elit. Sit iste ipsum
-          perspiciatis pariatur, minus
-        </p>
-        <button onClick={getAPI}>Fetch API</button>
-      <div>
-        <ul>
-          {data.map((item) => (
-            <li key={item.id}>
-              <h3>{item.setup}</h3>
-              <p>
-                {item.punchline}
-              </p>
-            </li>
-          ))}
-        </ul>
-      </div>
-      </section>
-      </header>
+    //   fetch("https://official-joke-api.appspot.com/jokes/programming/random")
+    //     .then((response) => response.json())
+    //     .then((json) => {
+    //       console.log(json);
+    //       setData((prevData => ({
+    //         ...prevData,
+    //         jokeOne: json
+    //       })));
+    //     });
+    // };
 
-    </div>
-  );
+    //Get Method
+    const secondAPI = () => {
+        fetch("https://official-joke-api.appspot.com/random_ten")
+            .then((response) => response.json())
+            .then((json) => {
+                console.log(json);
+                setData((prevData) => ({
+                    ...prevData,
+                    jokeTwo: json,
+                }));
+            });
+    };
+
+    return (
+        <div>
+            <header className="backimage">
+                <section className="headerSection left">
+                    <div>
+                        <h1>Random</h1>
+                        <ul>
+                            <li key={jokeOne.id}>
+                                <h3>{jokeOne.setup}</h3>
+                                <p>{jokeOne.punchline}</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <button className="btn" onClick={() => getJoke(jokeURLOne, setJokeOne)}>
+                        Push me!
+                    </button>
+                    <div></div>
+                </section>
+                <section className="headerSection right">
+                    <div>
+                        <h1>Coder</h1>
+                        <ul>
+                            <li key={jokeTwo?.[0]?.id}>
+                                <h3>{jokeTwo?.[0]?.setup}</h3>
+                                <p>{jokeTwo?.[0]?.punchline}</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <button className="btn2" onClick={() => getJoke(jokeURLTwo, setJokeTwo)}>
+                        Dont push me!
+                    </button>
+                </section>
+            </header>
+        </div>
+    );
 }
 
-export default FetchRandomJokes
+export default FetchRandomJokes;

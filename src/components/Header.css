@@ -1,139 +1,215 @@
 header {
-  min-height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .headerSection {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 3rem;
-  color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3rem;
+    color: var(--color-white);
+}
+
+.headerSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3rem;
+    color: var(--color-white);
 }
 
 .headerSection.left {
-  overflow: scroll;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(85, 153, 100, 1),
-    rgba(85, 153, 100, 1)
-  );
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, rgba(85, 153, 100, 0.5), rgba(85, 153, 100, 0.7));
 }
 .headerSection.right {
-  overflow: scroll;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(112, 56, 89, 1),
-    rgba(112, 56, 89, 1)
-  );
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, rgba(112, 56, 89, 0.5), rgba(112, 56, 89, 0.7));
+}
+.headerSection.left.li {
+    max-width: 5rem;
+    max-height: 3rem;
+}
+.headerSection.right.li {
+    max-width: 5rem;
+    max-height: 3rem;
 }
 
 .headerSection h4 {
-  font-size: 6rem;
-  font-weight: normal;
-  margin-bottom: 2.5rem;
+    font-size: 6rem;
+    font-weight: normal;
+    margin-bottom: 2.5rem;
 }
 .headerSection h1 {
-  font-size: 15rem;
-  margin-bottom: 4rem;
+    font-size: 15rem;
+    margin-bottom: 4rem;
 }
 .headerSection p {
-  width: 50%;
-  font-size: 2rem;
-  margin-bottom: 8rem;
+    width: 50%;
+    font-size: 2rem;
+    margin-bottom: 8rem;
 }
 .headerSection a {
-  background: var(--color-primary);
-  color: var(--color-white);
-  padding: 1.5rem 6rem;
-  font-size: 2.6rem;
-  border-radius: 1rem;
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: 1.5rem 6rem;
+    font-size: 2.6rem;
+    border-radius: 1rem;
 }
 
+.btn {
+    background: #18a0fb;
+    color: var(--color-white);
+    padding: 1.5rem 6rem;
+    font-size: 2.6rem;
+    border-radius: 1rem;
+    border: none;
+}
+.btn2 {
+    background: #a71717;
+    color: var(--color-white);
+    padding: 1.5rem 6rem;
+    font-size: 2.6rem;
+    border-radius: 1rem;
+    border: none;
+}
 
+.btn:hover {
+    color: whitesmoke;
+    background: #158cda;
+    transform: scale(1.05);
+}
+.btn2:hover {
+    color: whitesmoke;
+    background: #921c1c;
+    transform: scale(1.05);
+}
+.btn:active {
+    color: whitesmoke;
+    background: #158cda;
+    transform: scale(0.9);
+}
+.btn2:active {
+    color: whitesmoke;
+    background: #921c1c;
+    transform: scale(0.9);
+}
+
+.Landingpage {
+    margin-top: 25rem;
+}
+
+.LogOut {
+    padding: 2rem 0rem;
+    margin-top: -2rem;
+    background-color: #18a0fb;
+}
 
 @media only screen and (max-width: 1300px) {
-  .headerSection h4 {
-    font-size: 5rem;
-  }
-  .headerSection h1 {
-    font-size: 14rem;
-  }
-  .headerSection p {
-    width: 60%;
-  }
+    .headerSection h4 {
+        font-size: 5rem;
+    }
+    .headerSection h1 {
+        font-size: 14rem;
+    }
+    .headerSection p {
+        width: 60%;
+    }
 }
 @media only screen and (max-width: 1100px) {
-  .headerSection h1 {
-    font-size: 12rem;
-  }
-  .headerSection p {
-    width: 70%;
-  }
+    .headerSection h1 {
+        font-size: 12rem;
+    }
+    .headerSection p {
+        width: 70%;
+    }
 }
 @media only screen and (max-width: 950px) {
-  .headerSection h1 {
-    font-size: 10rem;
-  }
-  .headerSection p {
-    width: 80%;
-  }
+    .headerSection h1 {
+        font-size: 10rem;
+    }
+    .headerSection p {
+        width: 80%;
+    }
 }
 
 @media only screen and (max-width: 800px) {
-  header {
-    grid-template-columns: 1fr;
-  }
-  .headerSection {
-    padding: 1rem;
-  }
-  .headerSection.right {
-    background-position: top;
-  }
-  .headerSection h4 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-  }
-  .headerSection h1 {
-    font-size: 8rem;
-    margin-bottom: 2.5rem;
-  }
-  .headerSection p {
-    width: 60%;
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
-  .headerSection a {
-    padding: 1rem 3rem;
-    font-size: 1.8rem;
-  }
-  .image {
-    width: 50%;
-  }
+    header {
+        grid-template-columns: 1fr;
+    }
+    .headerSection {
+        padding: 1rem;
+    }
+    .headerSection.right {
+        background-position: top;
+    }
+    .headerSection h3 {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+    }
+    .headerSection h4 {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+    }
+    .headerSection h1 {
+        font-size: 8rem;
+        margin-bottom: 2.5rem;
+    }
+    .headerSection p {
+        width: 100%;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    .headerSection a {
+        padding: 1rem 3rem;
+        font-size: 1.8rem;
+    }
+    .image {
+        width: 50%;
+    }
 }
 @media only screen and (max-width: 600px) {
-  .headerSection p {
-    width: 70%;
-  }
+    .headerSection p {
+        width: 70%;
+    }
 }
 @media only screen and (max-width: 430px) {
-  .headerSection h4 {
-    font-size: 2.5rem;
-  }
-  .headerSection h1 {
-    font-size: 5rem;
-  }
-  .headerSection p {
-    width: 90%;
-    font-size: 1.6rem;
-  }
-  .headerSection a {
-    padding: 1rem 3rem;
-    font-size: 1.6rem;
-  }
+    .headerSection h4 {
+        font-size: 2.5rem;
+    }
+    .headerSection h1 {
+        font-size: 5rem;
+    }
+    .headerSection p {
+        width: 90%;
+        font-size: 1.6rem;
+    }
+    .headerSection a {
+        padding: 1rem 3rem;
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .backimage {
+        background-image: url("https://res.cloudinary.com/dpzxtgjp0/image/upload/v1668626129/mobileImage_wzvlmg.jpg");
+    }
+}
+@media (min-width: 800px) {
+    .backimage {
+        background-image: url("https://res.cloudinary.com/dpzxtgjp0/image/upload/v1668073875/cld-sample.jpg");
+    }
+}
+
+.backimage p {
+    font-size: 4rem;
+    padding-top: 1rem;
+    width: auto;
 }

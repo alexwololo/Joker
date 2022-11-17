@@ -4,7 +4,10 @@ import LogRocket from "logrocket";
 LogRocket.init("pnsbj7/joker");
 
 function App() {
-  return <LoginPage />;
+    return (
+        <div className="Login">
+            <LoginPage />
+        </div>
+    );
 }
-
 export default App;
