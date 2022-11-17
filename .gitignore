@@ -24,7 +24,7 @@ dist-ssr
 *.sw?
 
 # misc
-.env.local
+.env
 
 # # firebase
 # firebaseApp.jsx
