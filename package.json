@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "dotenv": "^16.0.3",
     "firebase": "^9.13.0",
     "link": "^1.5.1",
     "logrocket": "^3.0.1",
