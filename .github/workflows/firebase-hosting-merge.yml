@@ -7,7 +7,7 @@ name: Deploy to Firebase Hosting on merge
         branches:
             - main
 env:
-VITE_APP_apiKey: ${{secrets.VITE_APP_apikey}}
+VITE_APP_apiKey: ${{secrets.VITE_APP_apiKey}}
 VITE_APP_authDomain: ${{secrets.VITE_APP_authDomain}},
 VITE_APP_databaseURL: ${{secrets.VITE_APP_databaseURL}}
 VITE_APP_projectId: ${{secrets.VITE_APP_projectId}}
