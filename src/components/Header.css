@@ -81,11 +81,25 @@ header {
     border: none;
 }
 
-.btn .btn2 .menuBtn:hover,
-.nav .menu .menuBtn.active,
-.nav .menu .menuBtn:active {
-    color: var(--color-primary);
-    background: var(--color-white);
+.btn:hover {
+    color: whitesmoke;
+    background: #158cda;
+    transform: scale(1.05);
+}
+.btn2:hover {
+    color: whitesmoke;
+    background: #921c1c;
+    transform: scale(1.05);
+}
+.btn:active {
+    color: whitesmoke;
+    background: #158cda;
+    transform: scale(0.9);
+}
+.btn2:active {
+    color: whitesmoke;
+    background: #921c1c;
+    transform: scale(0.9);
 }
 
 .Landingpage {
@@ -94,6 +108,7 @@ header {
 
 .LogOut {
     padding: 2rem 0rem;
+    margin-top: -2rem;
     background-color: #18a0fb;
 }
 
@@ -185,16 +200,16 @@ header {
 @media (max-width: 800px) {
     .backimage {
         background-image: url("https://res.cloudinary.com/dpzxtgjp0/image/upload/v1668626129/mobileImage_wzvlmg.jpg");
-        min-height: 100vh;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
     }
 }
 @media (min-width: 800px) {
     .backimage {
         background-image: url("https://res.cloudinary.com/dpzxtgjp0/image/upload/v1668073875/cld-sample.jpg");
     }
+}
+
+.backimage p {
+    font-size: 4rem;
+    padding-top: 1rem;
+    width: auto;
 }

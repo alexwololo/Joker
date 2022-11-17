@@ -4,6 +4,7 @@ import FetchRandomJokes from "./FetchRandomJokes";
 import { auth } from "../firebaseApp";
 import { signOut } from "firebase/auth";
 import GetCookie from "./GetCookie";
+import "./LogButton.css";
 
 const LoginPage = () => {
     const [user, loading, error] = useAuthState(auth);

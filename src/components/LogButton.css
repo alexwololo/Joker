@@ -1,0 +1,44 @@
+.LogOut button {
+    background: #aa4646;
+    color: var(--color-white);
+    padding: 1rem 5rem;
+    font-size: 2rem;
+    border-radius: 1.5rem;
+    border: none;
+}
+
+.LogOut:hover button {
+    color: whitesmoke;
+    background: #aa4646;
+    transform: scale(1.02);
+}
+.LogOut:active button {
+    color: whitesmoke;
+    background: #963d3d;
+    transform: scale(0.9);
+}
+
+.Landingpage h1 {
+    font-size: 2.5rem;
+    color: rgb(37, 177, 172);
+    margin-bottom: 1rem;
+}
+
+/* .Login button {
+    background: #36a83b;
+    color: var(--color-white);
+    padding: 1rem 5rem;
+    font-size: 2rem;
+    border-radius: 1.5rem;
+    border: none;
+}
+
+.Login:hover button {
+    color: whitesmoke;
+    transform: scale(1.02);
+}
+.Login:active button {
+    color: whitesmoke;
+    background: #00ff0d;
+    transform: scale(0.9);
+} */

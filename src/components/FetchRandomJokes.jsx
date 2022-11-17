@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
 import "./Header.css";
-import mobileImage from "../assets/mobileImage.jpg";
-import Laugh from "../assets/Laugh.jpg";
 
 let jokeURLOne = "https://official-joke-api.appspot.com/jokes/random";
 let jokeURLTwo = "https://official-joke-api.appspot.com/jokes/programming/random";
@@ -16,8 +13,6 @@ function FetchRandomJokes() {
         const rslt = await fetch(jokeURL);
         const joke = await rslt.json();
         setJoke(joke);
-
-        // fetch("https://official-joke-api.appspot.com/random_joke").then(rslt=> rslt.json()).then(data=> setJoke(data))
     }
 
     useEffect(() => {
