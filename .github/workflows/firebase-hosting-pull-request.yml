@@ -2,16 +2,26 @@
 # https://github.com/firebase/firebase-tools
 
 name: Deploy to Firebase Hosting on PR
-'on': pull_request
+"on": pull_request
+
+env:
+VITE_APP_apiKey: ${{secrets.VITE_APP_apikey}}
+VITE_APP_authDomain: ${{secrets.VITE_APP_authDomain}},
+VITE_APP_databaseURL: ${{secrets.VITE_APP_databaseURL}}
+VITE_APP_projectId: ${{secrets.VITE_APP_projectId}}
+VITE_APP_storageBucket: ${{secrets.VITE_APP_storageBucket}}
+VITE_APP_messagingSenderId: ${{secrets.VITE_APP_messagingSenderId}}
+VITE_APP_appId: ${{secrets.VITE_APP_appId}}
+
 jobs:
-  build_and_preview:
-    if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - run: npm ci && npm run build
-      - uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_JOKER_67F23 }}'
-          projectId: joker-67f23
+    build_and_preview:
+        if: "${{ github.event.pull_request.head.repo.full_name == github.repository }}"
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - run: npm ci && npm run build
+            - uses: FirebaseExtended/action-hosting-deploy@v0
+              with:
+                  repoToken: "${{ secrets.GITHUB_TOKEN }}"
+                  firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_JOKER_67F23 }}"
+                  projectId: joker-67f23
