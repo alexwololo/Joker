@@ -4,14 +4,14 @@
 name: Deploy to Firebase Hosting on PR
 "on": pull_request
 
-env:
-VITE_APP_apiKey: ${{secrets.VITE_APP_apiKey}}
-VITE_APP_authDomain: ${{secrets.VITE_APP_authDomain}},
-VITE_APP_databaseURL: ${{secrets.VITE_APP_databaseURL}}
-VITE_APP_projectId: ${{secrets.VITE_APP_projectId}}
-VITE_APP_storageBucket: ${{secrets.VITE_APP_storageBucket}}
-VITE_APP_messagingSenderId: ${{secrets.VITE_APP_messagingSenderId}}
-VITE_APP_appId: ${{secrets.VITE_APP_appId}}
+# env:
+# VITE_APP_apiKey: ${{secrets.VITE_APP_apiKey}}
+# VITE_APP_authDomain: ${{secrets.VITE_APP_authDomain}},
+# VITE_APP_databaseURL: ${{secrets.VITE_APP_databaseURL}}
+# VITE_APP_projectId: ${{secrets.VITE_APP_projectId}}
+# VITE_APP_storageBucket: ${{secrets.VITE_APP_storageBucket}}
+# VITE_APP_messagingSenderId: ${{secrets.VITE_APP_messagingSenderId}}
+# VITE_APP_appId: ${{secrets.VITE_APP_appId}}
 
 jobs:
     build_and_preview:
